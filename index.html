@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calculator</title>
+
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<div class="calculator">
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="mini-history" id="miniHistory"></div>
+    <button id="openHistory">☰</button>
+  </div>
+
+  <!-- DISPLAY (cursor enabled) -->
+  <input
+    id="display"
+    class="display"
+    type="text"
+    value="0"
+    inputmode="none"
+  />
+
+  <!-- KEYPAD -->
+  <div class="buttons">
+    <button class="btn gray">AC</button>
+    <button class="btn gray">⌫</button>
+    <button class="btn gray">%</button>
+    <button class="btn orange">÷</button>
+
+    <button class="btn dark">7</button>
+    <button class="btn dark">8</button>
+    <button class="btn dark">9</button>
+    <button class="btn orange">×</button>
+
+    <button class="btn dark">4</button>
+    <button class="btn dark">5</button>
+    <button class="btn dark">6</button>
+    <button class="btn orange">−</button>
+
+    <button class="btn dark">1</button>
+    <button class="btn dark">2</button>
+    <button class="btn dark">3</button>
+    <button class="btn orange">+</button>
+
+    <button class="btn dark zero">0</button>
+    <button class="btn dark">.</button>
+    <button class="btn orange">=</button>
+  </div>
+
+  <div class="credit">developer – @lakshitpatidar</div>
+</div>
+
+<!-- HISTORY SCREEN -->
+<div class="history-screen" id="historyScreen">
+  <div class="history-header">
+    <span>History</span>
+    <button id="closeHistory">✕</button>
+  </div>
+  <div id="historyList"></div>
+</div>
+
+<!-- TOAST -->
+<div id="toast">
+  Developer – @lakshitpatidar · Tap anywhere to dismiss
+</div>
+
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+</body>
+</html>
