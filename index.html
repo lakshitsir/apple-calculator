@@ -2,39 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Calculator</title>
 
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="calculator">
 
-  <!-- History panel -->
-  <div class="history-panel" id="historyPanel">
-    <div class="history-header">
-      <span>History</span>
-      <button id="clearHistory">Clear</button>
-    </div>
-    <div class="history-list" id="historyList"></div>
+  <!-- top -->
+  <div class="top">
+    <div class="mini-history" id="miniHistory"></div>
+    <button id="openHistory">☰</button>
   </div>
 
-  <!-- Top -->
-  <div class="top-bar">
-    <button id="toggleHistory">☰</button>
-  </div>
-
-  <div class="history-preview" id="historyPreview"></div>
+  <!-- display -->
   <div class="display" id="display">0</div>
 
-  <!-- Buttons -->
+  <!-- keypad -->
   <div class="buttons">
     <button class="btn gray">AC</button>
-    <button class="btn gray">±</button>
+    <button class="btn gray">⌫</button>
     <button class="btn gray">%</button>
     <button class="btn orange">÷</button>
 
@@ -61,9 +53,19 @@
   <div class="credit">developer – @lakshitpatidar</div>
 </div>
 
-<!-- Toast -->
+<!-- history -->
+<div class="history-screen" id="historyScreen">
+  <div class="history-header">
+    <span>History</span>
+    <button id="closeHistory">✕</button>
+  </div>
+  <div id="historyList"></div>
+</div>
+
+<!-- toast -->
 <div id="toast">
-  Welcome 👋 developer – @lakshitpatidar
+  Welcome 👋<br>
+  developer – @lakshitpatidar
   <div class="toast-note">tap anywhere to dismiss</div>
 </div>
 
@@ -75,4 +77,4 @@ if ("serviceWorker" in navigator) {
 </script>
 
 </body>
-</html>
+                                </html>
