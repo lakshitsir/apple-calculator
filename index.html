@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="calculator">
+
+  <!-- History panel -->
+  <div class="history-panel" id="historyPanel">
+    <div class="history-header">
+      <span>History</span>
+      <button id="clearHistory">Clear</button>
+    </div>
+    <div class="history-list" id="historyList"></div>
+  </div>
+
+  <!-- Top -->
+  <div class="top-bar">
+    <button id="toggleHistory">☰</button>
+  </div>
+
+  <div class="history-preview" id="historyPreview"></div>
+  <div class="display" id="display">0</div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="btn gray">AC</button>
+    <button class="btn gray">±</button>
+    <button class="btn gray">%</button>
+    <button class="btn orange">÷</button>
+
+    <button class="btn dark">7</button>
+    <button class="btn dark">8</button>
+    <button class="btn dark">9</button>
+    <button class="btn orange">×</button>
+
+    <button class="btn dark">4</button>
+    <button class="btn dark">5</button>
+    <button class="btn dark">6</button>
+    <button class="btn orange">−</button>
+
+    <button class="btn dark">1</button>
+    <button class="btn dark">2</button>
+    <button class="btn dark">3</button>
+    <button class="btn orange">+</button>
+
+    <button class="btn dark zero">0</button>
+    <button class="btn dark">.</button>
+    <button class="btn orange">=</button>
+  </div>
+
+  <div class="credit">developer – @lakshitpatidar</div>
+</div>
+
+<!-- Toast -->
+<div id="toast">
+  Welcome 👋 developer – @lakshitpatidar
+  <div class="toast-note">tap anywhere to dismiss</div>
+</div>
+
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+</body>
+</html>
